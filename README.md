@@ -1,13 +1,13 @@
-Lung Cancer Question-Answering System
+# Lung Cancer Question-Answering System
 This project implements a question-answering system focused on lung cancer, utilizing a fine-tuned transformer model (google/flan-t5-small). It includes scripts for fine-tuning the model, evaluating its performance, and deploying an interactive chatbot using Streamlit. The dataset is provided in JSONL format (lung_cancer.jsonl).
-Project Structure
+## Project Structure
 
 finetune_llm.ipynb: Fine-tunes the google/flan-t5-small model on a custom lung cancer dataset.
 finetune_evaluate.ipynb: Evaluates the base and fine-tuned models using ROUGE metrics.
 frontend.py: Deploys an interactive chatbot interface for answering lung cancer-related questions.
 lung_cancer.jsonl: Sample dataset containing question-answer pairs about lung cancer.
 
-Requirements
+## Requirements
 
 Python 3.8+
 Libraries:pip install torch transformers datasets evaluate streamlit
@@ -15,16 +15,16 @@ Libraries:pip install torch transformers datasets evaluate streamlit
 
 Hardware: GPU recommended for faster training (optional for inference).
 
-Dataset
+## Dataset
 The dataset (lung_cancer.jsonl) is in JSONL format, where each line contains a JSON object with input (question) and output (answer) fields. Example:
 {"input": "What is lung cancer?", "output": "Lung cancer is a type of cancer that begins in the lungs, often in the cells lining the air passages."}
 
-Generating the Dataset
+# Generating the Dataset
 
 The provided lung_cancer.jsonl contains sample question-answer pairs.
 To create your own dataset, ensure each line is a valid JSON object with input and output fields.
 
-Scripts
+## Scripts
 1. Fine-Tuning (finetune_llm.ipynb)
 This script fine-tunes the google/flan-t5-small model on the lung cancer dataset.
 Steps:
